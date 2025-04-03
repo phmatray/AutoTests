@@ -1,6 +1,33 @@
-﻿@page "/EventDetails"
-<h3>EventDetails</h3>
+﻿@page "/eventdetails/{Id:int}"
+@inject EventService EventService
+@inject NavigationManager NavigationManager
 
 @code {
-    
+    [Parameter]
+    public int Id { get; set; }
+
+    private Event? _eventDetails;
+
+    protected override void OnInitialized()
+    {
+        _eventDetails = EventService.GetEventById(Id);
+    }
+
+    void NavigateToBooking(int id)
+    {
+        NavigationManager.NavigateTo($"/booking/{id}");
+    }
+}
+
+@if (_eventDetails == null)
+{
+    <p>Event not found.</p>
+}
+else
+{
+    <h1>@_eventDetails.Title</h1>
+    <p>@_eventDetails.Description</p>
+    <p>Date: @_eventDetails.Date.ToLongDateString()</p>
+    <p>Price: @_eventDetails.Price.ToString("C")</p>
+    <button @onclick="() => NavigateToBooking(_eventDetails.Id)">Book Ticket</button>
 }

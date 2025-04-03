@@ -1,5 +1,43 @@
-﻿<h3>Booking</h3>
+﻿@page "/booking/{Id:int}"
+@inject EventService EventService
+
+@if (_eventDetails == null)
+{
+    <p>Event not found.</p>
+}
+else if (_bookingConfirmed)
+{
+    <h2>Booking Confirmed!</h2>
+    <p>Thank you, @_userName, for booking a ticket for @_eventDetails.Title.</p>
+}
+else
+{
+    <h1>Booking for @_eventDetails.Title</h1>
+    <p>Date: @_eventDetails.Date.ToLongDateString()</p>
+    <p>Price: @_eventDetails.Price.ToString("C")</p>
+
+    <div>
+        <label for="userName">Your Name:</label>
+        <input type="text" id="userName" @bind="_userName" />
+    </div>
+    <button @onclick="ConfirmBooking">Confirm Booking</button>
+}
 
 @code {
-    
+    [Parameter]
+    public int Id { get; set; }
+    private Event? _eventDetails;
+    private string? _userName;
+    private bool _bookingConfirmed = false;
+
+    protected override void OnInitialized()
+    {
+        _eventDetails = EventService.GetEventById(Id);
+    }
+
+    void ConfirmBooking()
+    {
+        // Simulate booking confirmation process
+        _bookingConfirmed = true;
+    }
 }
