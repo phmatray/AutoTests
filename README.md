@@ -1,3 +1,5 @@
+![AutoTests banner](.github/banner.png)
+
 # Ticket Booking Demo Project 🎟️
 
 This repository demonstrates **Automated E2E Testing for Blazor using Reqnroll**. It showcases a simple ticket booking system with acceptance tests written in Gherkin syntax and executed with Playwright .NET.
