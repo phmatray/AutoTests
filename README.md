@@ -181,6 +181,19 @@ Feature: Ticket Booking System
 
 ---
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 10**
+- Microsoft.Playwright
+- Reqnroll.xUnit
+- xunit.v3
+- xunit.runner.visualstudio
+- Shouldly
+
+<!-- portfolio-techstack:end -->
+
 ## Contributing 🤝
 
 Contributions are welcome! If you have suggestions, bug fixes, or new features, please open an issue or submit a pull request.  
