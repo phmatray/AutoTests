@@ -2,6 +2,20 @@
 
 # Ticket Booking Demo Project 🎟️
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - AutoTests](https://img.shields.io/static/v1?label=phmatray&message=AutoTests&color=blue&logo=github)](https://github.com/phmatray/AutoTests)
+![Top language](https://img.shields.io/github/languages/top/phmatray/AutoTests)
+[![Stars](https://img.shields.io/github/stars/phmatray/AutoTests?style=social)](https://github.com/phmatray/AutoTests/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/AutoTests?style=social)](https://github.com/phmatray/AutoTests/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/AutoTests)](https://github.com/phmatray/AutoTests/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/AutoTests)](https://github.com/phmatray/AutoTests/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/AutoTests)](https://github.com/phmatray/AutoTests/commits)
+<!-- portfolio-badges:end -->
+
+
 This repository demonstrates **Automated E2E Testing for Blazor using Reqnroll**. It showcases a simple ticket booking system with acceptance tests written in Gherkin syntax and executed with Playwright .NET.
 
 ---
