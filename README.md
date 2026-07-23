@@ -25,9 +25,11 @@ This repository demonstrates **Automated E2E Testing for Blazor using Reqnroll**
 - [Features 🚀](#features-)
 - [Prerequisites ⚙️](#prerequisites-)
 - [Getting Started 🔧](#getting-started-)
+- [Usage 🚀](#usage-)
 - [Running the Application 🚀](#running-the-application-)
 - [Running the Tests 🧪](#running-the-tests-)
 - [Project Structure 📂](#project-structure-)
+- [Roadmap 🗺️](#roadmap-)
 - [Contributing 🤝](#contributing-)
 - [License 📄](#license-)
 
@@ -96,6 +98,19 @@ This repository demonstrates **Automated E2E Testing for Blazor using Reqnroll**
 
    </Project>
    ```
+
+---
+
+## Usage 🚀
+
+Once the packages are restored, run the Blazor server app and browse the demo booking flow:
+
+```bash
+cd TicketBookingApp
+dotnet run
+```
+
+Open `http://localhost:5140/` to see the list of events (`EventService` seeds three in-memory events), drill into an event's details page, and book a ticket by entering a name and confirming. The detailed steps for running the app and its Reqnroll/Playwright acceptance suite are below.
 
 ---
 
@@ -193,6 +208,16 @@ Feature: Ticket Booking System
 - Shouldly
 
 <!-- portfolio-techstack:end -->
+
+## Roadmap 🗺️
+
+- [ ] Add a GitHub Actions workflow to run the Reqnroll/Playwright suite automatically on every push and PR
+- [ ] Replace the in-memory `EventService` with persistent storage (e.g. EF Core + a real database)
+- [ ] Add form validation and error handling to the booking flow (e.g. empty name, duplicate bookings)
+- [ ] Extend the Gherkin feature set with negative/edge-case scenarios (invalid event id, cancellations)
+- [ ] Add a booking cancellation / management page
+
+See the [open issues](https://github.com/phmatray/AutoTests/issues) for details and to propose new ideas.
 
 ## Contributing 🤝
 
