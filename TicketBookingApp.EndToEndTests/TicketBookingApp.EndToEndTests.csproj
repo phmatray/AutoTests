@@ -3,6 +3,18 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <OutputType>Exe</OutputType>
+    <!-- Tests E2E Playwright : ils exigent l application VIVANTE sur http://localhost:5140
+         et un navigateur installe. `IsTestProject=false` les sort de
+         `dotnet test` tout en les laissant COMPILER en CI. C est un choix
+         explicite, pas un oubli :
+           - sans compilation ils pourriraient en silence ;
+           - sans application ils echoueraient a chaque run pour une raison
+             etrangere au code, et un rouge permanent ne se lit plus.
+         Pour les jouer en local : demarrer l app, puis executer directement le
+         binaire auto-heberge (verifie) :
+           dotnet build -c Release && \
+           ./TicketBookingApp.EndToEndTests/bin/Release/net10.0/TicketBookingApp.EndToEndTests -->
+    <IsTestProject>false</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
